@@ -1,0 +1,10 @@
+
+def wrap(string, max_width):
+    # Create a list of substrings of length max_width
+    lines = []
+    for i in range(0, len(string), max_width):
+        lines.append(string[i : i + max_width])
+    
+    # Join them together with newline characters
+    return "\n".join(lines)
+
