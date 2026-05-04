@@ -1,0 +1,24 @@
+from collections import defaultdict
+
+# Read n and m
+n, m = map(int, input().split())
+
+# Use a defaultdict of lists to store positions
+group_a = defaultdict(list)
+
+# Read group A words and store their 1-indexed positions
+for i in range(1, n + 1):
+    word = input().strip()
+    group_a[word].append(str(i))
+
+# Read group B words and check their presence in group A
+for _ in range(m):
+    word_b = input().strip()
+    
+    if word_b in group_a:
+        # Join the list of indices with a space and print
+        print(" ".join(group_a[word_b]))
+    else:
+        # If the word is not found in group A
+        print("-1")
+
