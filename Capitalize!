@@ -1,0 +1,5 @@
+
+def solve(s):
+    arr = [w.capitalize() for w in s.split(" ")]
+    return " ".join(arr)
+
