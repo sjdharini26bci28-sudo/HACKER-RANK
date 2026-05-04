@@ -1,0 +1,10 @@
+A = set(map(int, input().split()))
+n = int(input())
+results = []
+
+for _ in range(n):
+    other_set = set(map(int, input().split()))
+    # The '>' operator in Python sets checks for a strict superset
+    results.append(A > other_set)
+
+print(all(results))
