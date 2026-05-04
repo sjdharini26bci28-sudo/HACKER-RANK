@@ -1,0 +1,18 @@
+cube = lambda x: x**3
+
+def fibonacci(n):
+    fibbilist=[0,1]
+    match n:
+        case 0:
+            return []
+        case 1:
+            return [0]
+        case 2:
+            return fibbilist
+        case _:
+            for _ in range(3,n+1):
+                newnum=fibbilist[-1]+fibbilist[-2]
+                fibbilist.append(newnum)
+            return fibbilist
+    
+
