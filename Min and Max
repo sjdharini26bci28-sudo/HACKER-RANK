@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+if __name__ == "__main__":
+    n, m = map(int,input().split())
+    arr = numpy.array([input().split() for _ in range(n)],int)
+    
+    print(numpy.max(numpy.min(arr,1)))
