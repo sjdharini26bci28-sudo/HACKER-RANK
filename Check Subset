@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    # Read set A size (unused) and elements
+    _, set_a = input(), set(input().split())
+    # Read set B size (unused) and elements
+    _, set_b = input(), set(input().split())
+    
+    # Check if set_a is a subset of set_b
+    print(set_a.issubset(set_b))
