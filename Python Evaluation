@@ -1,0 +1,6 @@
+# Read the input line as a string
+var = input()
+
+# Evaluate the expression stored in the string
+eval(var)
+
