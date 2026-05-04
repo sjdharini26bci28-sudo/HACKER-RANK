@@ -1,0 +1,23 @@
+
+# Read n and m (the sizes of the array and the sets)
+n, m = map(int, input().split())
+
+# Read the elements of the array
+array = input().split()
+
+# Read sets A and B (using sets for fast lookup)
+set_a = set(input().split())
+set_b = set(input().split())
+
+# Initialize happiness
+happiness = 0
+
+# Calculate happiness: +1 for elements in A, -1 for elements in B
+for i in array:
+    if i in set_a:
+        happiness += 1
+    elif i in set_b:
+        happiness -= 1
+
+# Output the final happiness score
+print(happiness)
