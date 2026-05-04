@@ -1,0 +1,7 @@
+import numpy as np
+ops = ['add','subtract','multiply','floor_divide','mod','power']
+n,m = map(int, input().split())
+arrayA = np.array([list(map(int, input().split())) for _ in range(n)])
+arrayB = np.array([list(map(int, input().split())) for _ in range(n)])
+for op in ops:
+    print(getattr(np,op)(arrayA,arrayB))
