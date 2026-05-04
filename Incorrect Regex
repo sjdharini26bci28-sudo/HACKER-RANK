@@ -1,0 +1,15 @@
+import re
+S = int(input())
+
+for _ in range(S):
+    s = input()
+    repeats = ["++", "**", "*+", "+*", "??", "?+", "+?"]
+    try:
+        for i in repeats:
+            if i in s:
+                raise Exception
+        re.compile(s)  
+    except Exception as e:
+        print("False")
+    else:
+        print("True")
