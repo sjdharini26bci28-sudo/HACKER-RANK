@@ -1,0 +1,10 @@
+# Read English subscription data
+_ = int(input())
+english_set = set(map(int, input().split()))
+
+# Read French subscription data
+_ = int(input())
+french_set = set(map(int, input().split()))
+
+# Print the number of students in both sets
+print(len(english_set.intersection(french_set)))
