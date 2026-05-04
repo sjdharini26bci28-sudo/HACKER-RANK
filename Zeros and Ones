@@ -1,0 +1,11 @@
+import numpy
+
+# 1. Read the input and convert it into a tuple of integers
+# For the input "3 3 3", this creates (3, 3, 3)
+shape = tuple(map(int, input().split()))
+
+# 2. Print the array of zeros with the specified shape and integer type
+print(numpy.zeros(shape, dtype=int))
+
+# 3. Print the array of ones with the specified shape and integer type
+print(numpy.ones(shape, dtype=int))
