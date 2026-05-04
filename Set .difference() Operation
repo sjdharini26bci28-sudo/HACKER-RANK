@@ -1,0 +1,15 @@
+# 1. Input number of English subscribers (not used in calculation but required for format)
+n = int(input()) 
+# 2. Input set of English roll numbers
+english_subs = set(map(int, input().split())) 
+
+# 3. Input number of French subscribers
+m = int(input()) 
+# 4. Input set of French roll numbers
+french_subs = set(map(int, input().split())) 
+
+# 5. Calculate the difference (English only)
+only_english = english_subs.difference(french_subs) 
+
+# 6. Print the total count
+print(len(only_english))
