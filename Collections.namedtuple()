@@ -1,0 +1,18 @@
+# Read the number of students
+n = int(input())
+
+# Read the column names and find the index of 'MARKS'
+columns = input().split()
+marks_index = columns.index('MARKS')
+
+total_marks = 0
+
+# Process each student's data
+for _ in range(n):
+    student_data = input().split()
+    # Add the value at the marks_index to the total
+    total_marks += int(student_data[marks_index])
+
+# Calculate and print the average formatted to 2 decimal places
+average = total_marks / n
+print(f"{average:.2f}")
