@@ -1,0 +1,15 @@
+# Read number of English subscribers (unused)
+_ = int(input())
+# Read space-separated English roll numbers and convert to a set
+english_subs = set(map(int, input().split()))
+
+# Read number of French subscribers (unused)
+_ = int(input())
+# Read space-separated French roll numbers and convert to a set
+french_subs = set(map(int, input().split()))
+
+# Calculate the union of both sets
+total_unique_subs = english_subs.union(french_subs)
+
+# Output the total count
+print(len(total_unique_subs))
