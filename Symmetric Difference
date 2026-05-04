@@ -1,0 +1,15 @@
+# Step 1: Read input for set M
+m_size = int(input())
+m_set = set(map(int, input().split()))
+
+# Step 2: Read input for set N
+n_size = int(input())
+n_set = set(map(int, input().split()))
+
+# Step 3: Find the symmetric difference
+# This can be done using the ^ operator or .symmetric_difference() method
+sym_diff = m_set.symmetric_difference(n_set)
+
+# Step 4: Sort the resulting set and print each element on a new line
+for element in sorted(sym_diff):
+    print(element)
