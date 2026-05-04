@@ -1,0 +1,6 @@
+from collections import deque
+s = deque()
+for _ in range(int(input())):
+    cmd, *args = input().split()
+    getattr(s, cmd)(*map(int, args))
+print(*s)
