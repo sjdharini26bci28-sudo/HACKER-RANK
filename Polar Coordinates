@@ -1,0 +1,5 @@
+from cmath import phase
+if __name__ == '__main__':
+    n = complex(input())
+    print(abs(n))
+    print(phase(n))
