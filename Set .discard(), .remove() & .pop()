@@ -1,0 +1,20 @@
+n = int(input())
+nums = set(map(int,input().split()))
+commands_num = int(input())
+
+for _ in range(commands_num):
+    i = input().split()
+    command = i[0]
+    try:
+        if command=="pop":
+            x = list(nums)[::-1]
+            x.pop()
+            nums = set(x[::-1])
+        elif command=="remove":
+            nums.remove(int(i[1]))
+        elif command=="discard":
+            nums.discard(int(i[1]))
+    except KeyError:
+        pass
+
+print(sum(nums))
