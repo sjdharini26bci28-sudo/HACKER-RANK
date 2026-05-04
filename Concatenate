@@ -1,0 +1,13 @@
+import numpy
+
+# 1. Read N, M, and P
+n, m, p = map(int, input().split())
+
+# 2. Read the first array (N lines)
+array_1 = numpy.array([input().split() for _ in range(n)], int)
+
+# 3. Read the second array (M lines)
+array_2 = numpy.array([input().split() for _ in range(m)], int)
+
+# 4. Concatenate along axis 0 (rows) and print
+print(numpy.concatenate((array_1, array_2), axis=0))
