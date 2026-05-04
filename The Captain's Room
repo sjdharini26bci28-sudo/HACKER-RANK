@@ -1,0 +1,11 @@
+k = int(input())
+rooms = list(map(int, input().split()))
+
+# Calculate the sum of unique rooms multiplied by k
+sum_unique = sum(set(rooms)) * k
+
+# Calculate the actual sum of the list
+sum_actual = sum(rooms)
+
+# The captain's room is the difference divided by (k - 1)
+print((sum_unique - sum_actual) // (k - 1))
