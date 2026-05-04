@@ -1,0 +1,17 @@
+# Read initial set A
+_ = input()
+A = set(map(int, input().split()))
+
+# Read number of operations
+for _ in range(int(input())):
+    # Read operation name and set length
+    operation_name = input().split()[0]
+    # Read the other set elements
+    other_set = set(map(int, input().split()))
+    
+    # Dynamically call the set mutation method
+    getattr(A, operation_name)(other_set)
+
+# Output the sum of elements in set A
+print(sum(A))
+
