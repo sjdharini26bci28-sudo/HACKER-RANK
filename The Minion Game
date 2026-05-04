@@ -1,0 +1,19 @@
+def minion_game(string):
+    stuart_score = 0
+    kevin_score = 0
+    string_len = len(string)
+    vowels = {"A", "E", "I", "O", "U"}
+    
+    for index, s in enumerate(string):
+        if s in vowels:
+            kevin_score += string_len - index
+        else:
+            stuart_score += string_len - index
+                        
+    if stuart_score > kevin_score:
+        print(f"Stuart {stuart_score}")
+    elif stuart_score < kevin_score:
+        print(f"Kevin {kevin_score}")
+    else:
+        print("Draw")
+
