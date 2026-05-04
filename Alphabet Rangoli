@@ -1,0 +1,13 @@
+def print_rangoli(size):
+
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    rows = []
+
+    for i in range(size):
+        left = alphabet[size - 1: i: -1]
+        right = alphabet[i: size]
+        rows.append('-'.join(left + right).center(size * 4 - 3, '-'))
+
+    for row in rows[::-1] + rows[1:]:
+        print(row)
+        
