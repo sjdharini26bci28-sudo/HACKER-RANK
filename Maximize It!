@@ -1,0 +1,20 @@
+from itertools import product
+
+# Reading K and M
+k, m = map(int, input().split())
+
+# Reading the lists (skipping the first element Ni of each line)
+lists = []
+for _ in range(k):
+    row = list(map(int, input().split()))
+    lists.append(row[1:])
+
+# Generate all possible combinations picking one from each list
+results = []
+for combo in product(*lists):
+    # Calculate sum of squares modulo M
+    current_sum = sum(x**2 for x in combo) % m
+    results.append(current_sum)
+
+# Output the maximum result found
+print(max(results))
