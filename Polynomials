@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+COEFF = numpy.array(input().split(), float)
+X = float(input())
+print(numpy.polyval(COEFF, X))
